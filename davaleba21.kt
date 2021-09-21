@@ -1,26 +1,3 @@
-fun main() {
-
-
-
-    val a = arrayOf(8, 3, 4, 5, 6, 5, 3, 5, 99, 87, 65, 3, 3)
-    val b = arrayOf(1, 1, 11, 11, 11,1,1,1,1,1,1)
-
-//val b = mutableListOf<Int>(3,4,5,6,6,6,5,6)
-
-
-
-    val a1 = listOf(1,11,1,1,2,3)
-    val a2 = listOf(4,2,7,2,2,3)
-
-println(a1.sum())
-    println(a1.count())
-    println(a1.sum().toFloat()/a1.count())
-
-/*
-   println(differentElementsCountInArray(a))
-    println(intersectedList(a1,a2))
-    println(unionList(a1,a2))*/
-}
 
 
 fun differentElementsCountInArray(arr: Array<Int>): Int {
@@ -70,4 +47,20 @@ fun lessThanAverage(list: List<Int>):List<Int>{
     }
 
 
+}
+
+
+fun secondGreatestAndSmallest(list: List<Int>) {
+    val max = list.maxOrNull() ?: 0
+    var setForMax = list.toMutableSet()
+    setForMax.remove(max)
+
+    val min = list.minOrNull() ?: 0
+    val setForMin = list.toMutableSet()
+    setForMin.remove(min)
+
+    println(
+        "რიგით მეორე მაქსიმალური რიცხვი - ${setForMax.maxOrNull()} \n" +
+                "რიგით მეორე მინიმალური რიცხვი - ${setForMin.minOrNull()} "
+    )
 }
