@@ -61,5 +61,13 @@ fun lessThanAverage(list: List<Int>):List<Int>{
 
     var average = list.sum().toFloat()/list.count()
 
+    for (element in list){
+        if (element.toFloat() < average){
+            newList.add(element)
+        }
+
+        return newList
+    }
+
 
 }
